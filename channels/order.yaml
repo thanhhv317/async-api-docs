@@ -1,0 +1,78 @@
+components:
+  Get-order:
+    publish:
+      summary: get order by id
+      tags:
+        - name: get_order
+      message:
+        name: data
+        payload:
+          type: object
+          properties:
+            cmdtype:
+              $ref: '../common/schema.yaml#/components/schemas/Cmdtype'
+            initiator:
+              $ref: '../common/schema.yaml#/components/schemas/Initiator'
+            token:
+              $ref: '../common/schema.yaml#/components/schemas/Token'
+            handler:
+              $ref: '../common/schema.yaml#/components/schemas/Handler'
+            order_id:
+              type: number
+              description: id of order
+        examples:
+        - name: Request
+          payload:
+            cmdtype: 302
+            initiator: 08444450005
+            token: eyJpbml0aWF0b3IiOiIwODQ0NDQ1MDA1IiwiaWF0IjoxNjU1NzEzOTg4LCJleHAiOjE2NTgzMDU5ODh9.34iQjgGJisBsRuIMq2XxArZPNdzkdk9P8oQ_
+            handler: getOrderDetail
+            order_id: 30212
+        - name: Response
+          payload:
+            cmdtype: 302
+            initiator: 08444450005
+            token: eyJpbml0aWF0b3IiOiIwODQ0NDQ1MDA1IiwiaWF0IjoxNjU1NzEzOTg4LCJleHAiOjE2NTgzMDU5ODh9.34iQjgGJisBsRuIMq2XxArZPNdzkdk9P8oQ_
+            handler: getOrderDetail
+            order_id: 30212
+            data:
+              order_code: Dh30212
+              detail: more and more
+
+  Create-order:
+    publish:
+      summary: Create order V2
+      tags:
+        - name: create_order_v2
+      message:
+        name: data
+        payload:
+          type: object
+          properties:
+            cmdtype:
+              $ref: '../common/schema.yaml#/components/schemas/Cmdtype'
+            initiator:
+              $ref: '../common/schema.yaml#/components/schemas/Initiator'
+            token:
+              $ref: '../common/schema.yaml#/components/schemas/Token'
+            handler:
+              $ref: '../common/schema.yaml#/components/schemas/Handler'
+            
+        examples:
+        - name: Request
+          payload:
+            cmdtype: 385
+            initiator: 08444450005
+            token: eyJpbml0aWF0b3IiOiIwODQ0NDQ1MDA1IiwiaWF0IjoxNjU1NzEzOTg4LCJleHAiOjE2NTgzMDU5ODh9.34iQjgGJisBsRuIMq2XxArZPNdzkdk9P8oQ_
+            handler: getOrderDetail
+            cart: object here...
+        - name: Response
+          payload:
+            cmdtype: 385
+            initiator: 08444450005
+            token: eyJpbml0aWF0b3IiOiIwODQ0NDQ1MDA1IiwiaWF0IjoxNjU1NzEzOTg4LCJleHAiOjE2NTgzMDU5ODh9.34iQjgGJisBsRuIMq2XxArZPNdzkdk9P8oQ_
+            handler: getOrderDetail
+            order_id: 30212
+            data:
+              order_code: Dh30212
+              detail: more and more

@@ -1,0 +1,20 @@
+components:
+  schemas:
+    Initiator:
+      type: string
+      description: Phone number
+      example: 0982123123
+    Cmdtype:
+      type: number
+      description: type of action
+    Token:
+      type: string
+      description: Token of user
+      example: eyJpbml0aWF0b3IiOiIwODQ0NDQ1MDA1IiwiaWF0IjoxNjU1NzEzOTg4LCJleHAiOjE2NTgzMDU5ODh9.34iQjgGJisBsRuIMq2XxArZPNdzkdk9P8oQ_
+    Handler:
+      type: string
+      description: handler of action
+      example: this-is-my-handler
+    Ecom_cmd:
+      type: number
+      description: sub action

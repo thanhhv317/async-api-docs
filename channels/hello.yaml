@@ -1,0 +1,26 @@
+components:
+  Hello:
+    publish:
+      summary: get the information configured when first accessing the application.
+      message:
+        name: data
+        payload:
+          type: object
+          properties:
+            handler:
+              type: string
+              description: handler of action.
+            initiator:
+              type: string
+              description: phone number.
+              example: 0332082372
+            token:
+              type: string
+              description: token using for authentication.
+            cmdtype:
+              type: number
+              example: 1000
+              format: number
+              value: 1000
+              description: action of request
+              
